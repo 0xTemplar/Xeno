@@ -58,19 +58,19 @@ export const insights = [
     imgUrl: '/planet-06.png',
     title: 'No Coding Required',
     subtitle:
-      "LeXar's intuitive interface allows users to create and manage dTLDs without any programming knowledge. Simply follow the step-by-step process to set up your custom domain on the Patex blockchain.",
+      "Xeno's intuitive interface allows users to create and manage dTLDs without any programming knowledge. Simply follow the step-by-step process to set up your custom domain on the Patex blockchain.",
   },
   {
     imgUrl: '/planet-07.png',
     title: 'Community Empowerment',
     subtitle:
-      'Lexar Domains enable communities to establish their own unique online identity, fostering collaboration, communication, and growth. By creating a dTLD, communities can build a decentralized ecosystem that reflects their values and goals.',
+      'Xeno Domains enable communities to establish their own unique online identity, fostering collaboration, communication, and growth. By creating a dTLD, communities can build a decentralized ecosystem that reflects their values and goals.',
   },
   {
     imgUrl: '/planet-07.png',
     title: 'Seamless Integration',
     subtitle:
-      'Lexar Domains empowers seamless integration of dTLDs with diverse decentralized applications and services on the Patex network, fostering an interconnected ecosystem.',
+      'Xeno Domains empowers seamless integration of dTLDs with diverse decentralized applications and services on the Patex network, fostering an interconnected ecosystem.',
   },
   // {
   //   imgUrl: "/planet-08.png",

@@ -4,103 +4,98 @@
 // You can also run a script with `npx hardhat run <script>`. If you do that, Hardhat
 // will compile your contracts, add the Hardhat Runtime Environment's members to the
 // global scope, and execute the script.
-const hre = require('hardhat');
+const hre = require("hardhat");
 
 async function main() {
   //Import contracts to deploy
-  const LexarDomainFactory = await hre.ethers.getContractFactory(
-    'LexarDomainFactoryV2'
+  const XenoDomainFactory = await hre.ethers.getContractFactory(
+    "XenoDomainFactoryV2"
   );
 
-  const lexarDomainSBTFactory = await hre.ethers.getContractFactory(
-    'LexarDomainSBTFactory'
+  const xenoDomainSBTFactory = await hre.ethers.getContractFactory(
+    "XenoDomainSBTFactory"
   );
 
-  const LexarDomainHub = await hre.ethers.getContractFactory('LexarDomainHub');
+  const XenoDomainHub = await hre.ethers.getContractFactory("XenoDomainHub");
 
-  const LexarDomainResolver = await hre.ethers.getContractFactory(
-    'LexarDomainResolver'
+  const XenoDomainResolver = await hre.ethers.getContractFactory(
+    "XenoDomainResolver"
   );
 
-  const LexarSBTDomainResolver = await hre.ethers.getContractFactory(
-    'LexarSBTDomainResolver'
+  const XenoSBTDomainResolver = await hre.ethers.getContractFactory(
+    "XenoSBTDomainResolver"
   );
 
-  const ForbiddenTlds = await hre.ethers.getContractFactory('ForbiddenTldsV2');
+  const ForbiddenTlds = await hre.ethers.getContractFactory("ForbiddenTldsV2");
 
-  const metadataAddress = '0xA080918252C8826522aA95AddcA1A51eaA15E0d1';
+  const metadataAddress = "";
 
-  const royaltyAddress = '0x60b43d4Ef85804223a92774Ee9dAE1362Ab0c288';
+  const royaltyAddress = "";
 
-  const lexarHub = await LexarDomainHub.deploy(metadataAddress);
-  await lexarHub.deployed();
-  const hubAddress = lexarHub.address;
+  const xenoHub = await XenoDomainHub.deploy(metadataAddress);
+  await xenoHub.deployed();
+  const hubAddress = xenoHub.address;
 
-  const lexarResolver = await upgrades.deployProxy(LexarDomainResolver);
-  const domainSbtResolver = await upgrades.deployProxy(LexarSBTDomainResolver);
-  await lexarResolver.deployed();
+  const xenoResolver = await upgrades.deployProxy(XenoDomainResolver);
+  const domainSbtResolver = await upgrades.deployProxy(XenoSBTDomainResolver);
+  await xenoResolver.deployed();
   await domainSbtResolver.deployed();
-  const resolverAddress = lexarResolver.address;
+  const resolverAddress = xenoResolver.address;
   const domainSbtResolverAddress = domainSbtResolver.address;
-  console.log('resolver Address:', resolverAddress);
-  console.log('Domain Sbt resolver address:', domainSbtResolverAddress);
+  console.log("resolver Address:", resolverAddress);
+  console.log("Domain Sbt resolver address:", domainSbtResolverAddress);
 
-  await lexarResolver.addHubAddress(hubAddress, { gasLimit: 3000000 });
+  await xenoResolver.addHubAddress(hubAddress, { gasLimit: 3000000 });
   await domainSbtResolver.addHubAddress(hubAddress, { gasLimit: 3000000 });
 
   const forbiddenTlds = await ForbiddenTlds.deploy(hubAddress);
   await forbiddenTlds.deployed();
   const forbiddenTldsAddress = forbiddenTlds.address;
 
-  const lexarFactory = await LexarDomainFactory.deploy(
+  const xenoFactory = await XenoDomainFactory.deploy(
     0,
     forbiddenTldsAddress,
     metadataAddress,
     hubAddress,
     royaltyAddress
   );
-  await lexarFactory.deployed();
-  const factoryAddress = lexarFactory.address;
+  await xenoFactory.deployed();
+  const factoryAddress = xenoFactory.address;
 
-  await lexarResolver.addFactoryAddress(factoryAddress);
+  await xenoResolver.addFactoryAddress(factoryAddress);
 
   await forbiddenTlds.addFactoryAddress(factoryAddress);
 
-  const init = await lexarHub.init(
-    lexarFactory.address,
-    forbiddenTldsAddress
-  );
+  const init = await xenoHub.init(xenoFactory.address, forbiddenTldsAddress);
   await init.wait();
 
-  const toogle = await lexarFactory.toggleBuyingTlds();
+  const toogle = await xenoFactory.toggleBuyingTlds();
   await toogle.wait();
 
-  console.log('lexarDomainHub deployed to: ', hubAddress);
-  console.log('lexarDomainFactory deployed to: ', factoryAddress);
-  console.log('forbiddenTlds deployed to: ', forbiddenTldsAddress);
+  console.log("xenoDomainHub deployed to: ", hubAddress);
+  console.log("xenoDomainFactory deployed to: ", factoryAddress);
+  console.log("forbiddenTlds deployed to: ", forbiddenTldsAddress);
 
-  const lexarSBTFactory = await lexarDomainSBTFactory.deploy(
+  const xenoSBTFactory = await xenoDomainSBTFactory.deploy(
     0,
     forbiddenTldsAddress,
     metadataAddress,
     hubAddress,
     royaltyAddress
   );
-  await lexarSBTFactory.deployed();
-  const sbtFactoryAddress = lexarSBTFactory.address;
+  await xenoSBTFactory.deployed();
+  const sbtFactoryAddress = xenoSBTFactory.address;
   await domainSbtResolver.addFactoryAddress(sbtFactoryAddress);
 
-  console.log('lexarDomainSBTFactory deployed to: ', sbtFactoryAddress);
+  console.log("xenoDomainSBTFactory deployed to: ", sbtFactoryAddress);
 
   await forbiddenTlds.addFactoryAddress(sbtFactoryAddress);
 
-  const sbtInit = await lexarHub.initSBT(lexarSBTFactory.address);
+  const sbtInit = await xenoHub.initSBT(xenoSBTFactory.address);
   await sbtInit.wait();
 
-  const sbtToggle = await lexarSBTFactory.toggleBuyingTlds();
+  const sbtToggle = await xenoSBTFactory.toggleBuyingTlds();
   await sbtToggle.wait();
-
-  
 }
 
 // We recommend this pattern to be able to use async/await everywhere
