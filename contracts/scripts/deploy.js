@@ -28,9 +28,9 @@ async function main() {
 
   const ForbiddenTlds = await hre.ethers.getContractFactory("ForbiddenTldsV2");
 
-  const metadataAddress = "";
+  const metadataAddress = "0xf9159A129145eB695c33D8920787119dfcbE0c24";
 
-  const royaltyAddress = "";
+  const royaltyAddress = "0x0a7A7e96B6E642e56e1bb92EbFfFf1EfD5F85534";
 
   const xenoHub = await XenoDomainHub.deploy(metadataAddress);
   await xenoHub.deployed();
