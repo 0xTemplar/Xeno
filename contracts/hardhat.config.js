@@ -5,7 +5,8 @@ require("@nomiclabs/hardhat-etherscan");
 require("@openzeppelin/hardhat-upgrades");
 
 const dotenv = require("dotenv").config();
-const privateKey = "";
+const privateKey =
+  "0xc7be8991c20141e86db08f3c1abdaedd05a13c7c574ea6d7293053f05ac64082";
 
 task("accounts", "Prints The List Of Accounts", async (taskArgs, hre) => {
   const accounts = await hre.ethers.getSigners();

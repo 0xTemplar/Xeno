@@ -14,7 +14,7 @@ const main = async () => {
   console.log("Xeno Metadata Contract deployed to:", xenoMetadata.address);
 };
 
-// Xeno Metadata Contract deployed to:
+// Xeno Metadata Contract deployed to: 0xf9159A129145eB695c33D8920787119dfcbE0c24
 // resolver Address:
 // Domain Sbt resolver address:
 // XenoDomainHub deployed to:

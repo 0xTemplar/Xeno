@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 pragma solidity ^0.8.4;
 import "@openzeppelin/contracts/utils/Context.sol";
-import {ILexarDomainHub} from "./interface/ILexarDomainHub.sol";
+import {IXenoDomainHub} from "./interface/IXenoDomainHub.sol";
 
 ///@author 0xTemplar
 contract ForbiddenTldsV2 is Context {
@@ -26,14 +26,14 @@ contract ForbiddenTldsV2 is Context {
     _;
   }
 
-    ILexarDomainHub domainHub;
+    IXenoDomainHub domainHub;
   constructor(address _domainHub) {
     forbidden[".eth"] = true;
     forbidden[".com"] = true;
     forbidden[".org"] = true;
     forbidden[".net"] = true;
     forbidden[".xyz"] = true;
-    domainHub = ILexarDomainHub(_domainHub);
+    domainHub = IXenoDomainHub(_domainHub);
   }
 
   // PUBLIC
