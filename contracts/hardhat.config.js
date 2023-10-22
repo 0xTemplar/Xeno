@@ -26,7 +26,7 @@ module.exports = {
       // See its defaults
     },
     scrollSepolia: {
-      url: "https://scroll-sepolia.chainstacklabs.com",
+      url: "https://rpc.ankr.com/scroll_sepolia_testnet",
       accounts: [privateKey],
       chainId: 534351,
       // gas: 10000000, // Set the gas limit for transactions
@@ -44,9 +44,17 @@ module.exports = {
       },
     },
   },
-  // etherscan: {
-  //   apiKey: {
-  //     chiado: process.env.SCROLL_KEY,
-  //   },
-  // },
+  etherscan: {
+    apiKey: "abc",
+    customChains: [
+      {
+        network: "scrollSepolia",
+        chainId: 534351,
+        urls: {
+          apiURL: "https://sepolia-blockscout.scroll.io/api",
+          browserURL: "https://sepolia-blockscout.scroll.io/",
+        },
+      },
+    ],
+  },
 };
