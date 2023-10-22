@@ -15,6 +15,11 @@ Xeno is is a decentralized application (dApp) that empowers communities to creat
 
 - Users can register custom top level domains such as ".scroll" or ".xeno", and access a minting page where they can mint their choice domain name or share with other community members
 
+## Domain Types
+- **Standard (Transferable) Domains**: The standard domains are normal domains, similar to ENS / Unstoppable domains. They can be transferred from one owner to another, and can be sold on an NFT Marketplace
+  
+- **Soul Bound (Non-Transferable Domains)**: *The SBT Domain leverages the concept of a Soul Bound Token, is bound to the wallet and cannot be transfered. The metadata can only be updated.*
+
 ## Key Features and Benefits
 **Simple and Intuitive Interface**: Xeno offers an easy-to-use interface that eliminates the need for technical expertise, enabling individuals, communities, and DAOs to effortlessly create their own dTLDs.
 
@@ -46,7 +51,29 @@ Xeno addresses the pain points faced by these entities, offering a comprehensive
 - **Metadata Contract**: The "XenoMetadata" contract provides a mechanism for TLD contracts to store and retrieve metadata, including descriptions, brand names, and associated SVG images. It serves as a metadata storage contract for top-level domain (TLD) contracts.
 
 ### User Flow
-#### Create Domain Page
-![xeno-create](https://github.com/0xTemplar/Xeno/assets/124390899/104c11da-e26e-45a7-af2d-f866d17892f0)
+
+### Dashboard
+![xeno-dashboard](https://github.com/0xTemplar/Xeno/assets/124390899/2477fabd-b07c-47be-8cfc-97cc376a89dc)
+
+### Create Domain Page
+![xeno-create](https://github.com/0xTemplar/Xeno/assets/124390899/b5a42059-5b9b-4375-8ee0-12c0402b0e3e)
+
+### Create Domain Modal
+![create-modal](https://github.com/0xTemplar/Xeno/assets/124390899/e96e03d0-1b00-46a3-bf12-f0c5d5f2d35e)
+
+### Select Domain Minter
+![minter-xeno](https://github.com/0xTemplar/Xeno/assets/124390899/20e940e9-8d94-46fe-ad0c-4b790fe49076)
+
+### Domain Lookup
+![xeno-lookup](https://github.com/0xTemplar/Xeno/assets/124390899/25f68e81-e967-4aa3-a847-fba038ae7201)
+
+### Mint Domain Page
+![mint-dom](https://github.com/0xTemplar/Xeno/assets/124390899/d134b486-4bed-411b-9893-bc808a18a054)
+
+
+
+
+
+
 
    
