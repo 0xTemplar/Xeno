@@ -1,45 +1,45 @@
-import { useState } from 'react';
-import { useAccount } from 'wagmi';
-import { config } from '@/abi';
-import { ethers } from 'ethers';
-import { motion } from 'framer-motion';
-import { IoMdCheckmarkCircle } from 'react-icons/io';
-import { GridLoader } from 'react-spinners';
-import 'react-toastify/dist/ReactToastify.css';
-import Switch from './Switch';
-import sbtDomainFactoryAbi from '../abi/sbtFactoryAbi.json';
+import { useState } from "react";
+import { useAccount } from "wagmi";
+import { config } from "@/abi";
+import { ethers } from "ethers";
+import { motion } from "framer-motion";
+import { IoMdCheckmarkCircle } from "react-icons/io";
+import { GridLoader } from "react-spinners";
+import "react-toastify/dist/ReactToastify.css";
+import Switch from "./Switch";
+import sbtDomainFactoryAbi from "../abi/sbtFactoryAbi.json";
 
 const dropIn = {
   hidden: {
-    y: '-100vh',
+    y: "-100vh",
     opacity: 0,
   },
   visible: {
-    y: '0',
+    y: "0",
     opacity: 1,
     transition: {
       duration: 0.8,
-      type: 'spring',
+      type: "spring",
       damping: 25,
       stiffness: 500,
     },
   },
   exit: {
-    y: '100vh',
+    y: "100vh",
     opacity: 0,
   },
 };
 
 const CreateSbtModal = ({ visible, onClose }) => {
   const { address } = useAccount();
-  const [sbtAddress, setSbtAddress] = useState('');
-  const [domainName, setDomainName] = useState('');
-  const [price, setPrice] = useState('');
-  const [symbol, setSymbol] = useState('');
+  const [sbtAddress, setSbtAddress] = useState("");
+  const [domainName, setDomainName] = useState("");
+  const [price, setPrice] = useState("");
+  const [symbol, setSymbol] = useState("");
   const [buyingEnabled, setBuyingEnabled] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [receipt, setReceipt] = useState(false);
-  const [hash, setHash] = useState('');
+  const [hash, setHash] = useState("");
 
   const createSbtDomain = async (e) => {
     e.preventDefault();
@@ -48,11 +48,11 @@ const CreateSbtModal = ({ visible, onClose }) => {
     const signer = provider.getSigner();
 
     const formattedDomainName = domainName
-      .replace(/\s+/g, '')
+      .replace(/\s+/g, "")
       .toLowerCase()
       .trim();
-    const formattedSymbol = symbol.replace(/\s+/g, '').toUpperCase().trim();
-    const formattedPrice = ethers.utils.parseEther(price, 'wei');
+    const formattedSymbol = symbol.replace(/\s+/g, "").toUpperCase().trim();
+    const formattedPrice = ethers.utils.parseEther(price, "wei");
 
     console.log(formattedDomainName, formattedSymbol, price, buyingEnabled);
 
@@ -74,8 +74,8 @@ const CreateSbtModal = ({ visible, onClose }) => {
     );
 
     const receipt = await createSbtDomain.wait();
-    console.log('createSbtDomain: ', await createSbtDomain.hash);
-    console.log('receipt: ', receipt);
+    console.log("createSbtDomain: ", await createSbtDomain.hash);
+    console.log("receipt: ", receipt);
 
     setIsLoading(false);
     setReceipt(true);
@@ -85,7 +85,7 @@ const CreateSbtModal = ({ visible, onClose }) => {
   if (!visible) return null;
 
   const handleOnClose = (e) => {
-    if (e.target.id === 'container') onClose();
+    if (e.target.id === "container") onClose();
   };
 
   return (
@@ -99,12 +99,12 @@ const CreateSbtModal = ({ visible, onClose }) => {
         animate="visible"
         exit="exit"
       >
-        <div className={receipt === true ? 'hidden' : 'block'}>
+        <div className={receipt === true ? "hidden" : "block"}>
           {isLoading && (
             <div className=" rex3 bg-primary-black  p-10 rounded-[40px] w-full py-24  flex flex-col items-center justify-center">
               <div className="text-center mx-[60px]">
                 <h1 className="font-semibold text-center text-xl text-secondary-white mb-8">
-                  Please Wait!{' '}
+                  Please Wait!{" "}
                   <span className="italic">Creating your Domain...</span>
                 </h1>
                 <GridLoader size={60} color="#A020F0" />
@@ -113,7 +113,7 @@ const CreateSbtModal = ({ visible, onClose }) => {
           )}
         </div>
 
-        <div className={receipt === true ? 'hidden' : 'block'}>
+        <div className={receipt === true ? "hidden" : "block"}>
           {!isLoading && (
             <>
               <div className="rex3 bg-black-gradient-2  p-10 rounded-[40px] w-full  py-20 px-[74px]  flex flex-col items-center justify-center">
@@ -131,7 +131,7 @@ const CreateSbtModal = ({ visible, onClose }) => {
                     <input
                       type="text"
                       className="border  text-sm border-secondary-white p-2 rounded mb-5 bg-secondary-white text-gray-600 placeholder-gray-500 font-bold"
-                      placeholder="Add domain name (i.e '.patex')"
+                      placeholder="Add domain name (i.e '.scroll')"
                       required
                       onChange={(e) => setDomainName(e.target.value)}
                     />
@@ -186,17 +186,17 @@ const CreateSbtModal = ({ visible, onClose }) => {
                     </button>
                   </div>
                   <span className="text-white font-semibold mt-7">
-                    except .eth, .ens, .com, .org, .net, .smol, .dao, .xyz{' '}
+                    except .eth, .ens, .com, .org, .net, .smol, .dao, .xyz{" "}
                   </span>
                 </div>
               </div>
             </>
           )}
         </div>
-        <div className={receipt === true ? 'block' : 'hidden'}>
+        <div className={receipt === true ? "block" : "hidden"}>
           <div className="rex3 bg-black-gradient  p-10 rounded-[40px] w-full py-32 px-20  flex flex-col items-center justify-center">
             <h1 className="text-lg text-secondary-white">
-              Your domain has been created on the Patex Sepolia Testnet.
+              Your domain has been created on the Scroll Sepolia Testnet.
             </h1>
             <div className="flex items-center w-full justify-center mt-[20px] text-[100px] text-green-500">
               <IoMdCheckmarkCircle />
@@ -204,7 +204,7 @@ const CreateSbtModal = ({ visible, onClose }) => {
             <div className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 p-2 text-white mt-4 font-bold rounded-xl">
               <a
                 target="_blank"
-                href={'https://testnet.patexscan.io/tx/' + hash}
+                href={"https://sepolia-blockscout.scroll.io/tx/" + hash}
               >
                 Verify Transaction
               </a>

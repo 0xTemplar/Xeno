@@ -1,5 +1,5 @@
-import { Dialog, Transition } from '@headlessui/react';
-import { Fragment, useState } from 'react';
+import { Dialog, Transition } from "@headlessui/react";
+import { Fragment, useState } from "react";
 
 const MintedModal = ({ txHash, openMintModal, handleOnClose }) => {
   return (
@@ -45,7 +45,7 @@ const MintedModal = ({ txHash, openMintModal, handleOnClose }) => {
                   <div className="mt-2">
                     <p className="text-sm text-gray-500">
                       You can now proceed to verify your Domain transaction on
-                      the Patex Sepolia Block Explorer.
+                      the Scroll Sepolia Block Explorer.
                       <br /> <br />
                     </p>
                   </div>
@@ -58,9 +58,11 @@ const MintedModal = ({ txHash, openMintModal, handleOnClose }) => {
                     >
                       <a
                         target="_blank"
-                        href={'https://testnet.patexscan.io/tx/' + txHash}
+                        href={
+                          "https://sepolia-blockscout.scroll.io/tx/" + txHash
+                        }
                       >
-                        Confirm on Patex Sepolia
+                        Confirm on Scroll Sepolia
                       </a>
                     </button>
                     &nbsp;&nbsp;&nbsp;

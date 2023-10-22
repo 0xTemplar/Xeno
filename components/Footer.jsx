@@ -22,7 +22,7 @@ const Footer = () => (
           <SiHiveBlockchain className="text-white text-[24px]" />
           &nbsp;&nbsp;
           <h2 className="font-extrabold text-[24px] leading-[30px] text-white">
-            LeXar
+            Xeno
           </h2>
         </div>
         <button
@@ -35,7 +35,7 @@ const Footer = () => (
             className="w-[24px] h-[24px] object-contain"
           />
           <span className="font-normal text-[16px] text-white">
-            Enter the LeXar
+            Enter the Xeno
           </span>
         </button>
       </div>
@@ -45,10 +45,10 @@ const Footer = () => (
 
         <div className="flex items-center justify-between flex-wrap gap-4">
           <h4 className="font-extrabold text-[24px] text-white">
-            LeXar Domains
+            Xeno
           </h4>
           <p className="font-normal text-[14px] text-white opacity-50">
-            Copyright © 2023 LeXar Domains. All rights reserved.
+            Copyright © 2023 Xeno Domains. All rights reserved.
           </p>
 
           <div className="flex gap-4">

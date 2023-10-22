@@ -138,7 +138,7 @@ const CreateStaModal = ({ visible, onClose }) => {
                     <input
                       type="text"
                       className="border  text-sm border-secondary-white p-2 rounded mb-5 bg-secondary-white text-gray-600 placeholder-gray-500 font-bold"
-                      placeholder="Add domain name (i.e '.patex')"
+                      placeholder="Add domain name (i.e '.scroll')"
                       required
                       onChange={(e) => setDomainName(e.target.value)}
                     />
@@ -203,7 +203,7 @@ const CreateStaModal = ({ visible, onClose }) => {
         <div className={receipt === true ? "block" : "hidden"}>
           <div className="rex3 bg-primary-black  p-10 rounded-[40px] w-full py-24  flex flex-col items-center justify-center">
             <h1 className="text-lg text-secondary-white">
-              Your domain has been created on the Patex Sepolia Testnet.
+              Your domain has been created on the Scroll Sepolia Testnet.
             </h1>
             <div className="flex items-center w-full justify-center mt-[20px] text-[100px] text-green-500">
               <IoMdCheckmarkCircle />
@@ -211,7 +211,7 @@ const CreateStaModal = ({ visible, onClose }) => {
             <div className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 p-2 text-white mt-4 font-bold rounded-xl">
               <a
                 target="_blank"
-                href={"https://testnet.patexscan.io/tx/" + hash}
+                href={"https://sepolia-blockscout.scroll.io/tx/" + hash}
               >
                 Verify Transaction
               </a>

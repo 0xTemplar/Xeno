@@ -1,76 +1,76 @@
-import { AiOutlineHome, AiOutlineLineChart } from 'react-icons/ai';
-import { FiUpload } from 'react-icons/fi';
-import { FaExchangeAlt } from 'react-icons/fa';
-import { MdOutlineIntegrationInstructions } from 'react-icons/md';
-import { BsSearch } from 'react-icons/bs';
+import { AiOutlineHome, AiOutlineLineChart } from "react-icons/ai";
+import { FiUpload } from "react-icons/fi";
+import { FaExchangeAlt } from "react-icons/fa";
+import { MdOutlineIntegrationInstructions } from "react-icons/md";
+import { BsSearch } from "react-icons/bs";
 
 export const exploreWorlds = [
   {
-    id: 'world-1',
-    imgUrl: '/planet-01.png',
-    title: '1: Minimum Viable Product (MVP)',
+    id: "world-1",
+    imgUrl: "/planet-01.png",
+    title: "1: Minimum Viable Product (MVP)",
   },
   {
-    id: 'world-2',
-    imgUrl: '/planet-02.png',
-    title: '2: Restructing and Improvement',
+    id: "world-2",
+    imgUrl: "/planet-02.png",
+    title: "2: Restructing and Improvement",
   },
   {
-    id: 'world-3',
-    imgUrl: '/planet-03.png',
-    title: '3: Community building & Auditing',
+    id: "world-3",
+    imgUrl: "/planet-03.png",
+    title: "3: Community building & Auditing",
   },
   {
-    id: 'world-4',
-    imgUrl: '/planet-04.png',
-    title: '4: Launch on mainnet',
+    id: "world-4",
+    imgUrl: "/planet-04.png",
+    title: "4: Launch on mainnet",
   },
   {
-    id: 'world-5',
-    imgUrl: '/planet-05.png',
-    title: '5: Scaling and Partnerships',
+    id: "world-5",
+    imgUrl: "/planet-05.png",
+    title: "5: Scaling and Partnerships",
   },
 ];
 
 export const startingFeatures = [
-  'Choose the kind of domain you want to create (Non Transferable Domains (SBTs) or Transferable)',
-  'Add the custom domain name of your choice ( example ".tld", ".patex")',
-  'Create your domain name that can be minted by community members',
+  "Choose the kind of domain you want to create (Non Transferable Domains (SBTs) or Transferable)",
+  'Add the custom domain name of your choice ( example ".tld", ".scroll")',
+  "Create your domain name that can be minted by community members",
 ];
 
 export const newFeatures = [
   {
-    imgUrl: '/vrpano.svg',
-    title: 'A new world',
+    imgUrl: "/vrpano.svg",
+    title: "A new world",
     subtitle:
-      'we have the latest update with new world for you to try never mind',
+      "we have the latest update with new world for you to try never mind",
   },
   {
-    imgUrl: '/headset.svg',
-    title: 'More realistic',
+    imgUrl: "/headset.svg",
+    title: "More realistic",
     subtitle:
-      'In the latest update, your eyes are narrow, making the world more realistic than ever',
+      "In the latest update, your eyes are narrow, making the world more realistic than ever",
   },
 ];
 
 export const insights = [
   {
-    imgUrl: '/planet-06.png',
-    title: 'No Coding Required',
+    imgUrl: "/planet-06.png",
+    title: "No Coding Required",
     subtitle:
-      "Xeno's intuitive interface allows users to create and manage dTLDs without any programming knowledge. Simply follow the step-by-step process to set up your custom domain on the Patex blockchain.",
+      "Xeno's intuitive interface allows users to create and manage dTLDs without any programming knowledge. Simply follow the step-by-step process to set up your custom domain on the Scroll blockchain.",
   },
   {
-    imgUrl: '/planet-07.png',
-    title: 'Community Empowerment',
+    imgUrl: "/planet-07.png",
+    title: "Community Empowerment",
     subtitle:
-      'Xeno Domains enable communities to establish their own unique online identity, fostering collaboration, communication, and growth. By creating a dTLD, communities can build a decentralized ecosystem that reflects their values and goals.',
+      "Xeno Domains enable communities to establish their own unique online identity, fostering collaboration, communication, and growth. By creating a dTLD, communities can build a decentralized ecosystem that reflects their values and goals.",
   },
   {
-    imgUrl: '/planet-07.png',
-    title: 'Seamless Integration',
+    imgUrl: "/planet-07.png",
+    title: "Seamless Integration",
     subtitle:
-      'Xeno Domains empowers seamless integration of dTLDs with diverse decentralized applications and services on the Patex network, fostering an interconnected ecosystem.',
+      "Xeno Domains empowers seamless integration of dTLDs with diverse decentralized applications and services on the Scroll network, fostering an interconnected ecosystem.",
   },
   // {
   //   imgUrl: "/planet-08.png",
@@ -82,42 +82,42 @@ export const insights = [
 
 export const socials = [
   {
-    name: 'twitter',
-    url: '/twitter.svg',
+    name: "twitter",
+    url: "/twitter.svg",
   },
   {
-    name: 'linkedin',
-    url: '/linkedin.svg',
+    name: "linkedin",
+    url: "/linkedin.svg",
   },
   {
-    name: 'instagram',
-    url: '/instagram.svg',
+    name: "instagram",
+    url: "/instagram.svg",
   },
   {
-    name: 'facebook',
-    url: '/facebook.svg',
+    name: "facebook",
+    url: "/facebook.svg",
   },
 ];
 
 export const navigation = [
   {
-    name: 'Dashboard',
-    href: '/dashboard',
+    name: "Dashboard",
+    href: "/dashboard",
     icon: <AiOutlineHome />,
   },
   {
-    name: 'Create Domain',
-    href: '/createDomain',
+    name: "Create Domain",
+    href: "/createDomain",
     icon: <FaExchangeAlt />,
   },
   {
-    name: 'Minter',
-    href: '/minter',
+    name: "Minter",
+    href: "/minter",
     icon: <AiOutlineLineChart />,
   },
   {
-    name: 'Whois',
-    href: '/lookup',
+    name: "Whois",
+    href: "/lookup",
     icon: <BsSearch />,
   },
   // {
