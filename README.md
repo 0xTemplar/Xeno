@@ -1,5 +1,5 @@
 ## Xeno Domains
-Xeno is is a decentralized application (dApp) that empowers communities to create and manage custom decentralized top-level domains (dTLDs) on the Patex Network, all without writing a single line of code. Xeno is designed to provide an intuitive, user-friendly interface that simplifies the process of creating and managing dTLDs, making it accessible to everyone, regardless of their technical background.
+Xeno is is a decentralized application (dApp) that empowers communities to create and manage custom decentralized top-level domains (dTLDs) on the Scroll Blockchain, all without writing a single line of code. Xeno is designed to provide an intuitive, user-friendly interface that simplifies the process of creating and managing dTLDs, making it accessible to everyone, regardless of their technical background.
 
 ## Problem Statement
 - Many individuals, communities, and DAOs lack the technical expertise required to create their own decentralized top-level domains (dTLDs) on blockchain platforms.
