@@ -44,6 +44,9 @@ Xeno addresses the pain points faced by these entities, offering a comprehensive
 - Xeno Standard Domain Resolver Address: https://sepolia.scrollscan.dev/address/0xf0e3193c1a6dddc3c03bcb81e81bd3ceb69de817#code
 - Xeno SBT Resolver Address: https://sepolia.scrollscan.dev/address/0x803F929Fa64dD93D50Bf0186416813F6A339f867#code
 
+### Scroll Testnet related code
+https://github.com/0xTemplar/Xeno/tree/master/contracts/contracts
+
 ### How It Works:
 - **Top-Level Domain Factories**: It allows users to create TLDs by specifying the TLD name, symbol, owner, domain price, and buying availability(boolean). It generates new top level domain smart contracts, based on input specified by users. Each domain type, Standard and SBT have their own domain factory contract.
 - **Forbidden Tlds**: To ensure proper coordination, a contract named ForbiddenTlds has been established, which maintains a record of all previously created top-level domains. Naturally, factories are prohibited from creating new TLDs that share the same name, as indicated by the "forbidden TLDs list. Some forbidden tlds include (.eth, .xeno)
