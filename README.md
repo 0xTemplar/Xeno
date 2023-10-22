@@ -18,7 +18,7 @@ Xeno is is a decentralized application (dApp) that empowers communities to creat
 ## Key Features and Benefits
 **Simple and Intuitive Interface**: Xeno offers an easy-to-use interface that eliminates the need for technical expertise, enabling individuals, communities, and DAOs to effortlessly create their own dTLDs.
 
-**Dynamic Tld Contract generation**: Users can easily create their own decentralized TLDs through a step-by-step process. Lexar Domains generates new TLD contracts based on parameters specified by the user.
+**Dynamic Tld Contract generation**: Users can easily create their own decentralized TLDs through a step-by-step process. Xenop Domains generates new TLD contracts based on parameters specified by the user.
 
 **Enhanced Community Engagement**: Xeno fosters community involvement by enabling members to actively participate in the creation and governance of dTLDs, promoting inclusivity and collaboration.
 
@@ -44,4 +44,9 @@ Xeno addresses the pain points faced by these entities, offering a comprehensive
 - **Forbidden Tlds**: To ensure proper coordination, a contract named ForbiddenTlds has been established, which maintains a record of all previously created top-level domains. Naturally, factories are prohibited from creating new TLDs that share the same name, as indicated by the "forbidden TLDs list. Some forbidden tlds include (.eth, .xeno)
 - **Domain Resolver**: This serves as a convenient shortcut, although it is not essential for the system's functionality. With the Domain Resolver in place, there is no need to locate or store all TLD contract addresses. Instead, users simply need to be aware of one contract address (the resolver's address) and consistently resolve domains through that contract.
 - **Metadata Contract**: The "XenoMetadata" contract provides a mechanism for TLD contracts to store and retrieve metadata, including descriptions, brand names, and associated SVG images. It serves as a metadata storage contract for top-level domain (TLD) contracts.
+
+### User Flow
+#### Create Domain Page
+![xeno-create](https://github.com/0xTemplar/Xeno/assets/124390899/104c11da-e26e-45a7-af2d-f866d17892f0)
+
    
