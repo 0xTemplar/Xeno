@@ -11,7 +11,7 @@ import "@rainbow-me/rainbowkit/styles.css";
 import { jsonRpcProvider } from "wagmi/providers/jsonRpc";
 import merge from "lodash.merge";
 
-// import { DomainContextProvider } from "@/context/context";
+import { DomainContextProvider } from "@/context/context";
 
 const scrollSepolia = {
   id: 534351,
@@ -68,9 +68,9 @@ export default function App({ Component, pageProps }) {
   return (
     <WagmiConfig client={wagmiClient}>
       <RainbowKitProvider chains={chains} theme={myTheme} coolMode>
-        {/* <DomainContextProvider> */}
-        <Component {...pageProps} />
-        {/* </DomainContextProvider> */}
+        <DomainContextProvider>
+          <Component {...pageProps} />
+        </DomainContextProvider>
       </RainbowKitProvider>
     </WagmiConfig>
   );
