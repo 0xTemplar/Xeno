@@ -27,7 +27,7 @@ const Sidebar = () => {
           <SiHiveBlockchain className="text-white text-[24px]" />
           &nbsp;&nbsp;
           <h2 className="font-extrabold text-[24px] leading-[30px] text-secondary-white">
-            LeXar
+            Xeno
           </h2>
         </Link>
         <ul className="list-none mt-16 ml-6 flex flex-col sm:flex justify-start items-start gap-6 flex-1 ">

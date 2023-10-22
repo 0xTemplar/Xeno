@@ -16,18 +16,16 @@ const About = () => (
       viewport={{ once: true, amount: 0.25 }}
       className={`${styles.innerWidth} mx-auto ${styles.flexCenter} flex-col`}
     >
-      <TypingText title="| About LeXar Domains" textStyles="text-center" />
+      <TypingText title="| About Xeno" textStyles="text-center" />
 
       <motion.p
         variants={fadeIn("up", "tween", 0.2, 1)}
         className="mt-[8px] font-normal sm:text-[32px] text-[20px] text-center text-secondary-white"
       >
         <span className="font-extrabold text-white">Xeno</span> is a
-        permissionless Web3 domain service, that enables individuals,
-        communities and organizations (DAOs) to create a personalized top level
-        domain. With our decentralized NFT domain service, you can establish
-        your digital identity and build your online presence in a secure,
-        trustless environment.
+        decentralized application (dApp) that empowers communities to create and
+        manage custom decentralized top-level domains (dTLDs) on the Scroll
+        Blockchain, all without writing a single line of code.
       </motion.p>
 
       <motion.img
