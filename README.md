@@ -11,7 +11,7 @@ Xeno is is a decentralized application (dApp) that empowers communities to creat
 
 - We provide an intuitive and user-friendly interface that simplifies the process, making it accessible to everyone, regardless of their technical background.
 
-- Xenos streamlines and automates the creation, management, and monetization of decentralized top-level domains, enabling seamless integration into the Patex Network infrastructure. The service issues human readable addresses according to the TLD selection.
+- Xenos streamlines and automates the creation, management, and monetization of decentralized top-level domains, enabling seamless integration into the Scroll Blockchain's infrastructure. The service issues human readable addresses according to the TLD selection.
 
 - Users can register custom top level domains such as ".scroll" or ".xeno", and access a minting page where they can mint their choice domain name or share with other community members
 
@@ -40,7 +40,8 @@ Xeno addresses the pain points faced by these entities, offering a comprehensive
 - Xeno SBT Resolver Address: https://sepolia-blockscout.scroll.io/address/0x803F929Fa64dD93D50Bf0186416813F6A339f867#code
 
 ### How It Works:
-- **Top-Level Domain Factories**: It allows users to create TLDs by specifying the TLD name, symbol, owner, domain price, and buying availability(boolean). It generates new top level domain smart contracts, based on input specified by users.
-- **Forbidden Tlds**: To ensure proper coordination, a contract named ForbiddenTlds has been established, which maintains a record of all previously created top-level domains. Naturally, factories are prohibited from creating new TLDs that share the same name, as indicated by the "forbidden TLDs list.
+- **Top-Level Domain Factories**: It allows users to create TLDs by specifying the TLD name, symbol, owner, domain price, and buying availability(boolean). It generates new top level domain smart contracts, based on input specified by users. Each domain type, Standard and SBT have their own domain factory contract.
+- **Forbidden Tlds**: To ensure proper coordination, a contract named ForbiddenTlds has been established, which maintains a record of all previously created top-level domains. Naturally, factories are prohibited from creating new TLDs that share the same name, as indicated by the "forbidden TLDs list. Some forbidden tlds include (.eth, .xeno)
 - **Domain Resolver**: This serves as a convenient shortcut, although it is not essential for the system's functionality. With the Domain Resolver in place, there is no need to locate or store all TLD contract addresses. Instead, users simply need to be aware of one contract address (the resolver's address) and consistently resolve domains through that contract.
+- **Metadata Contract**: The "XenoMetadata" contract provides a mechanism for TLD contracts to store and retrieve metadata, including descriptions, brand names, and associated SVG images. It serves as a metadata storage contract for top-level domain (TLD) contracts.
    
