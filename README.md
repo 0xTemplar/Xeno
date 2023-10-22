@@ -15,6 +15,8 @@ Xeno is is a decentralized application (dApp) that empowers communities to creat
 
 - Users can register custom top level domains such as ".scroll" or ".xeno", and access a minting page where they can mint their choice domain name or share with other community members
 
+- Users can save pieces of data like their twitter profile link, personal website, etc in their domain.
+
 ## Domain Types
 - **Standard (Transferable) Domains**: The standard domains are normal domains, similar to ENS / Unstoppable domains. They can be transferred from one owner to another, and can be sold on an NFT Marketplace
   
