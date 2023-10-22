@@ -73,6 +73,14 @@ https://github.com/0xTemplar/Xeno/tree/master/contracts/contracts
 ### Mint Domain Page
 ![mint-dom](https://github.com/0xTemplar/Xeno/assets/124390899/d134b486-4bed-411b-9893-bc808a18a054)
 
+### Update Domain Metadata
+![update xeno](https://github.com/0xTemplar/Xeno/assets/124390899/0e524f7f-0a32-4c90-8a24-9be2a247ac79)
+
+### Change Domain Ownership
+![transfer xeno](https://github.com/0xTemplar/Xeno/assets/124390899/d290a037-c2de-4e17-9b0f-12f7ac22d230)
+
+
+
 
 
 
