@@ -11,7 +11,7 @@ import "react-toastify/dist/ReactToastify.css";
 const MinterHeader = () => {
   const { address, isConnected } = useAccount();
   const [userDomain, setUserDomain] = useState("");
-  const [selectTld, setSelectTld] = useState(".xeno");
+  const [selectTld, setSelectTld] = useState(".test");
   const [selectTldPrice, setSelectTldPrice] = useState("0.004");
   const [domainFactory, setDomainFactory] = useState("");
   const [tlds, setTlds] = useState();

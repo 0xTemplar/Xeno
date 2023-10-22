@@ -64,7 +64,7 @@ const DomainTypeCard = () => {
 
         <div className="mt-8">
           <button
-            className="bg-gray-500 hover:bg-gray-500 px-3 py-2 rounded-lg w-full text-white"
+            className="bg-gray-500 hover:bg-gray-500 px-3 py-2 mt-6 rounded-lg w-full text-white"
             visible={showSbtModal}
             onClick={() => setShowStandardModal(true)}
           >

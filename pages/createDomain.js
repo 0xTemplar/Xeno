@@ -8,12 +8,12 @@ import DomainTypeCard from "@/components/DomainTypeCard";
 
 const createDomain = () => {
   return (
-    <div className="bg-black-gradient h-screen">
+    <div className="bg-black-gradient h-full">
       <div className="flex">
         <Sidebar />
         <ProfileNavbar />
       </div>
-      <div>
+      <div className="pb-20">
         <CreateHeader />
 
         <DomainTypeCard />
